@@ -1,0 +1,16 @@
+
+make BOARD=SS_ULP_S3 USER_C_MODULES=~/ulp/upy/c_modules/esp32.cmake
+py -m esptool --chip esp32s3 --port COM36 write_flash -z 0 micropython_ulp2\ports\esp32\build-SS_ULP_S3\firmware.bin
+py -m serial.tools.miniterm COM3
+
+
+import esp32
+u = esp32.ULP()
+u.set_wakeup_period(1000*1000) # 1s
+u.run_embedded()
+
+# get variables here
+# cat build-SS_ULP_S3/esp-idf/main/ulp_embedded/ulp_embedded.ld
+ulp_var_counter = 0x50000084
+u.read(ulp_var_counter)
+
