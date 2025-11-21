@@ -11,3 +11,6 @@ set(SDKCONFIG_DEFAULTS
 set(MICROPY_FROZEN_MANIFEST ${MICROPY_BOARD_DIR}/manifest.py)
 set(ulp_embedded_sources ${MICROPY_BOARD_DIR}/ulp/main.c)
 
+
+
+
