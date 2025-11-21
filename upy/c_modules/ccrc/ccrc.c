@@ -122,17 +122,17 @@ static MP_DEFINE_CONST_FUN_OBJ_1(crc16_ccit_obj, crc16_ccit);
 // and the MicroPython object reference.
 // All identifiers and strings are written as MP_QSTR_xxx and will be
 // optimized to word-sized integers by the build system (interned strings).
-static const mp_rom_map_elem_t example_module_globals_table[] = {
+static const mp_rom_map_elem_t cmodule_ccrc_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_ccrc) },
     { MP_ROM_QSTR(MP_QSTR_crc16), MP_ROM_PTR(&crc16_obj) },
     { MP_ROM_QSTR(MP_QSTR_crc16_ccit), MP_ROM_PTR(&crc16_ccit_obj) },
 };
-static MP_DEFINE_CONST_DICT(example_module_globals, example_module_globals_table);
+static MP_DEFINE_CONST_DICT(cmodule_ccrc_globals, cmodule_ccrc_globals_table);
 
 // Define module object.
 const mp_obj_module_t cmodule_ccrc = {
     .base = { &mp_type_module },
-    .globals = (mp_obj_dict_t *)&example_module_globals,
+    .globals = (mp_obj_dict_t *)&cmodule_ccrc_globals,
 };
 
 // Register the module to make it available in Python.

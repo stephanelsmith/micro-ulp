@@ -1,5 +1,6 @@
 
 make BOARD=SS_ULP_S3 USER_C_MODULES=~/ulp/upy/c_modules/esp32.cmake
+make USER_C_MODULES=~/ulp/upy/c_modules
 
 py -m esptool --chip esp32s3 --port COM90 write_flash -z 0 micropython_ulp\ports\esp32\build-SS_ULP_S3\firmware.bin
 py -m serial.tools.miniterm COM92
