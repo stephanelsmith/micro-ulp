@@ -1,4 +1,6 @@
 
+
+```
 make BOARD=SS_ULP_S3 USER_C_MODULES=~/ulp/upy/c_modules/esp32.cmake
 make USER_C_MODULES=~/ulp/upy/c_modules
 
@@ -17,4 +19,5 @@ u.run_embedded()
 # cat build-SS_ULP_S3/esp-idf/main/ulp_embedded/ulp_embedded.ld
 ulp_var_counter = 0x50000080
 u.read(ulp_var_counter)
+```
 
